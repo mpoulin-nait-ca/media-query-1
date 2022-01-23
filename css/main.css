@@ -1,0 +1,59 @@
+body {
+	background-color: #bbb;
+}
+div {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 24px;
+	/*background-color: pink;*/
+}
+.about div {
+	border: 1px solid black;
+	margin: 16px 0;
+}
+.container { 
+	max-width: 1200px;
+	margin: 0 auto;
+	/*background-color: mintcream;*/
+ }
+header { background-color: lightcoral; }
+nav { background-color: yellow; }
+main { background-color: mediumaquamarine; }
+section { background-color: peru; }
+footer { background-color: crimson; }
+
+@media (min-width: 560px)
+{
+	main, main .container { 
+		display: flex; 
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+	section { flex-basis: calc((100% - 16px) / 2); }
+}
+
+@media(min-width: 780px)
+{
+	.about {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.about div {
+		margin: 0;
+		flex-basis: 30%;
+	}
+	/* need to add # of gutters and number of columns */
+	section { flex-basis: calc((100% - (16px * 3)) / 4); }
+}
+
+@media(min-width: 850px)
+{
+
+	body { background-color: aqua; }
+	/*div { background-color: yellowgreen; }*/
+
+	h2 { font-size: 36px; color: mediumpurple; }
+
+
+}
